@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.i-bg-light {
+  background-color: #f5f5f7;
+}
+
+.i-bg-dark {
+  background-color: rgb(83, 83, 83);
+}
+
+.my-alert {
+  position: absolute;
+  right: 2rem;
+  top: -10;
+  transition: all .5s ease-out;
+  animation-name: alertAnimation;
+  animation-fill-mode: forwards;
+  animation-duration: .8s;
+}
+
+@keyframes alertAnimation {
+  100% {
+    top: 4rem
+  }
+}
