@@ -19,8 +19,8 @@ export default function TextUtils(myProps) {
       } border p-4 mt-5`}
     >
       <h2 className='text-center'>userState() use in React App</h2>
-      <div className='d-flex justify-content-between'>
-        <div className='shadow rounded border p-4 w-100 mx-1'>
+      <div className='row m-auto'>
+        <div className='col-md shadow rounded border p-4 m-2'>
           <div className='mb-3'>
             <textarea
               onChange={textAreaOnChangedListener}
@@ -44,7 +44,7 @@ export default function TextUtils(myProps) {
             </div>
           </div>
         </div>
-        <div className='shadow rounded border p-4 w-100 mx-1'>
+        <div className='col-md shadow rounded border p-4 m-2'>
           <div className='row'>
             <h6 className='col'>Preview:</h6>
             <p className='col'>{myText}</p>

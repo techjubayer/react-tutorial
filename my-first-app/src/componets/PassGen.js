@@ -77,7 +77,7 @@ export default function PassGen(myProps) {
     >
       <h2 className='text-center'>Generate Random Password</h2>
       <div className='row m-auto'>
-        <div className='d-flex flex-column justify-content-center shadow rounded border p-4 col mx-1'>
+        <div className='d-flex flex-column justify-content-center shadow rounded border p-4 col m-1'>
           <div className='form-check my-1'>
             <input
               className='form-check-input'
@@ -130,11 +130,11 @@ export default function PassGen(myProps) {
           </div>
           <div className='p-3'>
             <label className='form-label'>Password Length:</label>
-            <div className='d-flex justify-content-between'>
+            <div className='row m-auto'>
               <input
                 onChange={onPassLengthChange}
                 type='range'
-                className='form-range w-70 mx-1'
+                className='form-range mx-1 col-md'
                 min='0'
                 max='100'
                 step='1'
@@ -143,7 +143,7 @@ export default function PassGen(myProps) {
               />
               <input
                 type='number'
-                className='border border-success rounded mx-1 text-center'
+                className='border border-success rounded mx-1 text-center col-md'
                 onChange={onPassLengthChange}
                 value={passLength}
               />
@@ -156,7 +156,7 @@ export default function PassGen(myProps) {
             Generate Password
           </button>
         </div>
-        <div className='shadow rounded border p-4 col mx-1'>
+        <div className='shadow rounded border p-4 col m-1'>
           <h4 className='text-center'>Generated Password</h4>
           <div className='d-flex flex-column justify-content-center'>
             <textarea
