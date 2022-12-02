@@ -25,6 +25,7 @@ Install (Bracket Pair Color DLW) extension on VS Code Editor
 ### Add node_modules base on project package.json and package-lock.json
 
 ```
+//Install Node Package Manager (NPM)
 ~$ npm install
 ```
 
