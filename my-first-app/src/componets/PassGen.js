@@ -76,6 +76,7 @@ export default function PassGen(myProps) {
       } border p-4 mt-5`}
     >
       <h2 className='text-center'>Generate Random Password</h2>
+      <h5 className='text-center text-decoration-underline'>(My Final Project)</h5>
       <div className='row m-auto'>
         <div className='d-flex flex-column justify-content-center shadow rounded border p-4 col m-1'>
           <div className='form-check my-1'>

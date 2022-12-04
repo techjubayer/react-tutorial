@@ -10,8 +10,8 @@ import TextUtils from "./TextUtils";
 export default function Home(myProps) {
   return (
     <div className='container pb-5'>
-      <PassGen mode={myProps.mode} myAlert={myProps.myAlert} />
       <PassFunAsProps mode={myProps.mode} myAlert={myProps.myAlert} toggleMode={myProps.toggleMode}/>
+      <PassGen mode={myProps.mode} myAlert={myProps.myAlert} />
       <TextUtils mode={myProps.mode} />
       <Test mode={myProps.mode} />
       <EventHandler mode={myProps.mode}/>
