@@ -39,7 +39,7 @@ function App() {
         myAlert={alert}
       />
       <Alert myAlert={alert} />
-      <Home mode={appTheme} myAlert={showAlert} />
+      <Home mode={appTheme} myAlert={showAlert} toggleMode={toggleAppTheme} />
     </div>
   );
 }

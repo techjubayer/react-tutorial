@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function Navbar(myProps) {
+  let checked = myProps.mode === "dark" ? "true" : "";
   return (
     <nav
       className={`navbar navbar-expand-lg navbar-${myProps.mode} bg-${myProps.mode}`}
@@ -99,6 +100,7 @@ export default function Navbar(myProps) {
               className='form-check-input'
               id='customSwitch1'
               onClick={myProps.toggleMode}
+              checked={checked}
             />
           </div>
         </div>
