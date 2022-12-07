@@ -24,7 +24,7 @@ export default function FormHandle(myProps) {
       <h2 className='text-center'>Form Data Handle</h2>
       <form onSubmit={onSubmitHandler}>
         <div className='form-group'>
-          <label for='exampleInputEmail1'>Email address</label>
+          <label htmlFor='exampleInputEmail1'>Email address</label>
           <input
             type='text'
             className='form-control'
@@ -38,7 +38,7 @@ export default function FormHandle(myProps) {
           </small>
         </div>
         <div className='form-group'>
-          <label for='exampleInputPassword1'>Password</label>
+          <label htmlFor='exampleInputPassword1'>Password</label>
           <input
             type='password'
             className='form-control'
@@ -54,7 +54,7 @@ export default function FormHandle(myProps) {
             id='exampleCheck1'
             onChange={(e) => setIsChecked(e.target.checked)}
           />
-          <label className='form-check-label' for='exampleCheck1'>
+          <label className='form-check-label' htmlFor='exampleCheck1'>
             Check me out
           </label>
         </div>

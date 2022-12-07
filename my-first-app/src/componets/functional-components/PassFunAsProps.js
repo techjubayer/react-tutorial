@@ -27,6 +27,7 @@ export default function PassFunAsProps(myProps) {
             id='customSwitch1'
             onClick={myProps.toggleMode}
             checked={checked}
+            onChange={myProps.toggleMode}
           />
         </div>
       </div>

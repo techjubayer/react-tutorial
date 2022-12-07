@@ -9,7 +9,7 @@ export default function Navbar(myProps) {
     >
       <div className='container'>
         <a className='navbar-brand' href='/'>
-          My First App
+          My React App
         </a>
         <button
           className='navbar-toggler'
@@ -101,6 +101,7 @@ export default function Navbar(myProps) {
               id='customSwitch1'
               onClick={myProps.toggleMode}
               checked={checked}
+              onChange={myProps.toggleMode}
             />
           </div>
         </div>
