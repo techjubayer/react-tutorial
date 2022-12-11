@@ -8,6 +8,9 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Resume from "./componets/Resume";
 import Users from "./componets/Users";
 import User from "./componets/User";
+import Login from "./componets/Login";
+import MyProtectedRoute from "./componets/MyProtectedRoute";
+import GetReq from "./componets/functional-components/apis/GetReq";
 // import Page404 from "./componets/functional-components/Page404";
 
 function App() {
@@ -45,25 +48,47 @@ function App() {
           myAlert={alert}
         />
         <Alert myAlert={alert} />
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <Home
-                mode={appTheme}
-                myAlert={showAlert}
-                toggleMode={toggleAppTheme}
-              />
-            }
-          ></Route>
-          <Route path='/resume' element={<Resume mode={appTheme} />}></Route>
-          <Route path='/users' element={<Users mode={appTheme} />}></Route>
-          <Route path='/users/:name' element={<User mode={appTheme} />}></Route>
 
-          {/* <Route path='/*' element={<Page404 mode={appTheme} />}></Route> */}
-          {/* Or */}
-          <Route path='/*' element={<Navigate to='/' />}></Route>
-        </Routes>
+        <div div className='container pb-5' style={{ minHeight: "100vh" }}>
+          <Routes>
+            <Route
+              path='/'
+              element={
+                <Home
+                  mode={appTheme}
+                  myAlert={showAlert}
+                  toggleMode={toggleAppTheme}
+                />
+              }
+            ></Route>
+
+            {/* Use of protected route */}
+            <Route path='/login' element={<Login mode={appTheme} />}></Route>
+            <Route
+              path='/resume'
+              element={
+                <MyProtectedRoute parentComp={<Resume mode={appTheme} />} />
+              }
+            />
+            <Route
+              path='/users/'
+              element={
+                <MyProtectedRoute parentComp={<Users mode={appTheme} />} />
+              }
+            >
+              <Route path=':name' element={<User mode={appTheme} />}></Route>
+            </Route>
+
+            <Route path='/apis-get' element={<GetReq mode={appTheme} />}></Route>
+            {/* <Route path='/users/' element={<Users mode={appTheme} />}>
+              <Route path=':name' element={<User mode={appTheme} />}></Route>
+            </Route> */}
+
+            {/* <Route path='/*' element={<Page404 mode={appTheme} />}></Route> */}
+            {/* Or */}
+            <Route path='/*' element={<Navigate to='/' />}></Route>
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );

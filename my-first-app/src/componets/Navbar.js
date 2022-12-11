@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar(myProps) {
   let checked = myProps.mode === "dark" ? "true" : "";
@@ -9,9 +9,9 @@ export default function Navbar(myProps) {
       className={`navbar navbar-expand-lg navbar-${myProps.mode} bg-${myProps.mode}`}
     >
       <div className='container'>
-        <Link className='navbar-brand' to='/'>
+        <NavLink className='navbar-brand' to='/'>
           My React App
-        </Link>
+        </NavLink>
         <button
           className='navbar-toggler'
           type='button'
@@ -26,35 +26,34 @@ export default function Navbar(myProps) {
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
             <li className='nav-item'>
-              <Link className='nav-link active' aria-current='page' to='/'>
+              <NavLink className='nav-link' aria-current='page' to='/'>
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className='nav-item'>
-              <Link className='nav-link' to='/resume'>
+              <NavLink className='nav-link' to='/resume'>
                 Resume
-              </Link>
+              </NavLink>
             </li>
             <li className='nav-item'>
-              <Link className='nav-link' to='/users'>
+              <NavLink className='nav-link' to='/users'>
                 Users
-              </Link>
+              </NavLink>
             </li>
             <li className='nav-item dropdown'>
-              <a
+              <NavLink
                 className='nav-link dropdown-toggle'
-                href='/'
                 role='button'
                 data-bs-toggle='dropdown'
                 aria-expanded='false'
               >
-                Dropdown
-              </a>
+                Apis
+              </NavLink>
               <ul className='dropdown-menu'>
                 <li>
-                  <a className='dropdown-item' href='/'>
-                    Action
-                  </a>
+                  <NavLink className='dropdown-item' to='/apis-get'>
+                    Get Request
+                  </NavLink>
                 </li>
                 <li>
                   <a className='dropdown-item' href='/'>
@@ -72,9 +71,9 @@ export default function Navbar(myProps) {
               </ul>
             </li>
             <li className='nav-item'>
-              <a className='nav-link disabled' href='/'>
-                Disabled
-              </a>
+              <NavLink className='nav-link' to='/login'>
+                Login
+              </NavLink>
             </li>
           </ul>
           {/* <button className='btn btn-outline-success mx-1' type='submit'>
