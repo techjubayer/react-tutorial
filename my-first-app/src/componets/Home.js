@@ -8,6 +8,8 @@ import FormHandle from "./functional-components/FormHandle";
 import HideShow from "./functional-components/HideShow";
 import HighOrderComponents from "./functional-components/HighOrderComponents";
 import Hooks from "./functional-components/Hooks";
+import UseNavigate from "./functional-components/hooks/UseNavigate";
+import UseSearchParams from "./functional-components/hooks/UseSearchParams";
 import Loop from "./functional-components/Loop";
 import PassFunAsProps from "./functional-components/PassFunAsProps";
 import PassGen from "./PassGen";
@@ -15,7 +17,7 @@ import TextUtils from "./TextUtils";
 
 export default function Home(myProps) {
   return (
-    <div className='container pb-5'>
+    <>
       <PassFunAsProps
         mode={myProps.mode}
         myAlert={myProps.myAlert}
@@ -23,6 +25,8 @@ export default function Home(myProps) {
       />
       <PassGen mode={myProps.mode} myAlert={myProps.myAlert} />
       <Loop mode={myProps.mode} />
+      <UseNavigate mode={myProps.mode} />
+      <UseSearchParams mode={myProps.mode} />
       <CtrledUnCtrledComponenets mode={myProps.mode} />
       <HighOrderComponents mode={myProps.mode} />
       <UsesOfPureComp mode={myProps.mode} />
@@ -34,6 +38,6 @@ export default function Home(myProps) {
       <HideShow mode={myProps.mode} />
       <FormHandle mode={myProps.mode} />
       <RefFunc mode={myProps.mode} />
-    </div>
+    </>
   );
 }

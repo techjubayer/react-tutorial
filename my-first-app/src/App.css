@@ -22,6 +22,10 @@
   animation-duration: .8s;
 }
 
+.active {
+  color: red !important;
+}
+
 @keyframes alertAnimation {
   100% {
     top: 4rem

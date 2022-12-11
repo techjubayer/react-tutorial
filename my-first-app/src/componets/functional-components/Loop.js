@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function Loop(myProps) {
-  const [user, setUser] = useState([
+  const [user] = useState([
     { name: "Jubayer", email: "test@gmail.com", age: 25 },
     { name: "Mahbub", email: "test2@gmail.com", age: 22 },
     { name: "Ramesh", email: "test3@gmail.com", age: 23 },
@@ -28,9 +28,9 @@ export default function Loop(myProps) {
             <th>Email</th>
             <th>Age</th>
           </tr>
-          {user.map((item, key) => (
+          {user.map((item, keyOf) => (
             <tr>
-              <td>{key}</td>
+              <td>{keyOf}</td>
               <td>{item.name}</td>
               <td>{item.email}</td>
               <td>{item.age}</td>
